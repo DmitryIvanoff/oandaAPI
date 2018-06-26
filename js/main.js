@@ -6,26 +6,26 @@
         
         }
     });
-
-    define (function(require) {
-
+    define (function(require,exports, module) {
+        "use strict"
         var context = require("./context");
-        var ctx = new context.Context("mysite.com",80,false,"lol");
-        var accountId = "101-004-8523412-001"
-        ctx.setToken("5fab1156c59dba001f91c7e329581e6d-fcec4321d69b2953c561bf7b511aface");
-        ctx.setUrl("https://api-fxpractice.oanda.com");
-        var handler = function(response)
-        {
-            //$(document)(response.rawBody);
-             console.log(response.method);
-             console.log(response.rawBody);
-             console.log("finished!")
-             var account = JSON.parse(response.rawBody).account;
-             console.log(account);
-             $(document).ready(function(){
-                 $(".account p").text(account.balance);
-              
-             });
-        }
-        ctx.account.get(accountId,handler);
+        var account;
+        var handler = function(response){
+
+                            console.log(response.method);
+                            console.log(response.rawBody);
+                            console.log("finished!")
+                            account = JSON.parse(response.rawBody).account;
+                            console.log(account);
+                            $(document).ready(function(){
+                                $("header p").text(account.balance);
+                            });
+                        };
+        var accountId = "101-004-8523412-001";
+        var OandaAPI = new context.Context("mysite.com",80,false,"lol");
+        OandaAPI.setToken("5fab1156c59dba001f91c7e329581e6d-fcec4321d69b2953c561bf7b511aface");
+        OandaAPI.setUrl("https://api-fxpractice.oanda.com");
+        exports.OandaAPI = OandaAPI;
+        OandaAPI.account.get(accountId,handler);
+
     });
