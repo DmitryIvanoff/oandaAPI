@@ -1,0 +1,9 @@
+header{
+	border: 2px solid red;
+}
+.layout_account{
+	border: 2px solid blue;
+}
+.layout_pricing{
+	border: 2px solid green;
+}
