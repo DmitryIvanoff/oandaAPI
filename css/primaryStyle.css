@@ -1,9 +1,20 @@
-header{
-	border: 2px solid red;
+/*
+.page-header h3{
+	background-color: rgb(30,30,30,0.9);
+	color: rgb(30,255,30,0.9);
 }
+
 .layout_account{
-	border: 2px solid blue;
+	border: 2px solid rgb(0,0,0,0.5);
+
 }
 .layout_pricing{
-	border: 2px solid green;
+	border: 2px solid rgb(0,0,0,0.5);
 }
+.layout_trading{
+	border: 2px solid rgb(0,0,0,0.5);
+}
+.content-layout{
+	border: 2px solid rgb(0,0,0,0.5);
+}
+*/
