@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    	<meta charset = "UTF-8">
+    	<meta charset = "utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     	<title>
     		OandaAPI
     	</title>
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    	<script data-main="js/main.js" src="js/require.js"></script>
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    	<link rel="stylesheet" href="css/primaryStyle.css">
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
 
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+         <script data-main="js/main.js" src="js/require.js" async="true"></script>
+             	<link rel="stylesheet" href="css/primaryStyle.css">
+    </head>
     <body>
     	<div class="container-fluid">
-		    <div class="page-header">
+		    <div class="jumbotron page-header">
 		    	<img src="https://developer.oanda.com/images/logo.png">
 		    </div>
 		    <div class="content-layout">
 		    	<div class="row">
-			    	<div class="col-sm-3 col-md-3 col-lg-4 layout_account">
-				    	<div class="panel panel-default">	
-				    		<h3 class="panel-heading">
-				    			Account
-				    		</h3>
-				    		<div class="panel-body">	               
+			    	<div class="col-sm-3 col-md-3 col-lg-4 col_account">
+				    	<div class="accounts_summary">	
+				    		<ul class="nav nav-tabs nav-justified">
+ 								 <li class="nav-item">
+   								    <a class="nav-link active" data-toggle="tab" href="#current">{AccountID}</a>
+  								</li>
+						    </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active container" id="current">
+                                	<h3 class="panel-heading">
+				    					{AccountID} account
+				    				</h3>	               
 						    		<p class="balance"></p>
-					                <ul class="instruments">
-					                	
-					                </ul>
-			                </div>
-
+			                	</div>
+                            </div>
+			            </div>
+			            <div class="instruments">
 			            </div>
 			    	</div>
 			    	<div class="col-sm-9 col-md-9 col-lg-8">
@@ -44,17 +51,8 @@
 						            <p class="bid"></p>
 						            <p class="time"></p>
 					            </div>
-					            <div class="dropdown">
-								    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">EUR/USD
-								    <span class="caret"></span></button>
-								    <ul class="dropdown-menu">
-								      <li><a href="#">HTML</a></li>
-								      <li><a href="#">CSS</a></li>
-								      <li><a href="#">JavaScript</a></li>
-								    </ul>
-								</div>
+					     
 				            </div>
-
 				    	</div>
 				    	<div class="container-fluid layout_trading">
 				    		<div class="panel panel-default">				           
@@ -67,6 +65,5 @@
 		        </div>
 		    </div>
 	    </div>
-    
     </body>
 </html>
